@@ -136,11 +136,9 @@ export default function FeedScreen({ navigation }: Props) {
             </Button>
           }
           
-          {item.authorid == currentUserId ? <Button onPress={() => {deleteSocial(item)}}><Text style={{color: "red"}}>Remove</Text></Button> : <Text></Text>}
+          {item.authorid == currentUserId ? <Button onPress={() => {deleteSocial(item)}}><Text style={{color: "red"}}>Remove</Text></Button> : null}
         </Card.Actions>
-        {/* TODO: Add a like/interested button & delete soccial button. See Card.Actions
-              in React Native Paper for UI/UX inspiration.
-              https://callstack.github.io/react-native-paper/card-actions.html */}
+
       </Card>
     );
   };

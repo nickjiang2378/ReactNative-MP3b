@@ -47,9 +47,8 @@ export default function SignInScreen({ navigation }: Props) {
         var errorCode = error.code;
         var error = error.message;
         console.log(error)
-        if (errorCode == "auth/wrong-password") {
-          setErrorMessage("Email/Password credentials are invalid");
-          setErrorVisible(true);
+        if (errorCode == "auth/user-not-found" || errorCode == "auth/wrong-password") {
+          showError("Email/Password credentials are invalid");
         }
         console.log(errorCode);
       });
@@ -106,9 +105,7 @@ export default function SignInScreen({ navigation }: Props) {
   return (
     <>
       <SafeAreaView style={AppStyles.container}>
-        <Appbar.Header>
-          <Appbar.Content title="Sign In" />
-        </Appbar.Header>
+
         <View>
           <View style={{"padding": 20, "marginBottom": 20}}>
           <TextInput 

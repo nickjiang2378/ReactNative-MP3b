@@ -37,6 +37,7 @@ export default function NewSocialScreen({ navigation }: Props) {
   // Loading state for submit button
   const [loading, setLoading] = useState(false);
 
+  console.log("New Social Screen Up")
   const currentUserId = firebase.auth().currentUser!.uid;
 
   // Code for ImagePicker (from docs)

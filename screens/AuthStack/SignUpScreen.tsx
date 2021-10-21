@@ -82,9 +82,7 @@ export default function SignUpScreen({ navigation }: Props) {
   return (
     <>
       <SafeAreaView style={AppStyles.container}>
-        <Appbar.Header>
-          <Appbar.Content title="Sign Up" />
-        </Appbar.Header>
+
         <View>
           <View style={{"padding": 20, "marginBottom": 20}}>
             <TextInput 
